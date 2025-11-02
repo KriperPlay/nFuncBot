@@ -18,6 +18,7 @@ this easy, just use numpy functions(Ex.: abs(x), np.sin(x) )
 * ID_USERS - list of user which can use bot if white list is on
 * API_TOKEN - api token lol
 * XMIN,XMAX - range x
+* POINT - count of point, does graph more smooth 
 * HELP_TEXT - welcome msg
 
 # End
