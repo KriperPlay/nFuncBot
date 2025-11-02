@@ -21,6 +21,9 @@ this easy, just use numpy functions(Ex.: abs(x), np.sin(x) )
 * POINT - count of point, does graph more smooth 
 * HELP_TEXT - welcome msg
 
+# Example of using
+<img width="501" height="314" alt="Снимок экрана 2025-11-02 в 21 18 15" src="https://github.com/user-attachments/assets/4823a6a3-3cc3-413f-9b22-bcab549816df" />
+
 # End
 this bot just school project,no more
 (thx for reading this <3)
