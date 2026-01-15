@@ -8,7 +8,9 @@ nFuncBot - selfhost telegram bot for generation graphs of functions
 idk, this my school project lol
 
 # How to use?
-send him math. function(Ex.: 2*x+2) and u will take a png graph
+send him math. function -> 2*x+2
+u can use -> x^2 or x**2
+alse u can make several graphs -> x+2; x^2
 
 ## How to use abs,sin etc?
 this easy, just use numpy functions(Ex.: abs(x), np.sin(x) )
