@@ -39,15 +39,24 @@ safe_dict = {
 }
 
 def graph(func: str):
+	func = func.replace('^', '**')
+	print(func)
 	try:
-		y = eval(func, {"__builtins__": {}},safe_dict)
-		
-		plt.plot(x, y,color='black')
+		if ';' in func:
+			__func = func.split(';')
+			for _func in __func:
+				y = eval(_func, {"__builtins__": {}},safe_dict)
+				plt.plot(x, y,label=f"{_func.strip()}")
+		else:
+			y = eval(func, {"__builtins__": {}},safe_dict)
+			plt.plot(x, y,color='black',label=f"{func}")
+
 		plt.plot(x,y1,color='red')
 		plt.axvline(x=0,color='red')
 		plt.xlabel('x')
 		plt.ylabel('y') 
-		plt.title(f'y={func}') 
+		plt.title(f'{func.replace(';',' ')}') 
+		plt.legend()
 		plt.grid()
 		
 		buf = io.BytesIO()
@@ -75,17 +84,15 @@ def start(message):
 def send_graph(message):
 	if config.WHITE_LIST:
 		if str(message.from_user.id) in config.ID_USERS:
-			func_str = message.text.strip()
-			image_buffer = graph(func_str)
+			image_buffer = graph(message.text.strip())
 			
-			bot.send_photo(message.chat.id, image_buffer, caption=f"y = {func_str}")
+			bot.send_photo(message.chat.id, image_buffer)
 		else:
 			bot.reply_to(message,"You are not in the white list")
 	else:
-		func_str = message.text.strip()
-		image_buffer = graph(func_str)
+		image_buffer = graph(message.text.strip())
 		
-		bot.send_photo(message.chat.id, image_buffer, caption=f"y = {func_str}")
+		bot.send_photo(message.chat.id, image_buffer)
 	
 
 if __name__ == '__main__':
