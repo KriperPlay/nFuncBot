@@ -29,6 +29,8 @@ this easy, just use numpy functions(Ex.: abs(x), np.sin(x) )
 
 # Example of using
 <img width="501" height="314" alt="Снимок экрана 2025-11-02 в 21 18 15" src="https://github.com/user-attachments/assets/4823a6a3-3cc3-413f-9b22-bcab549816df" />
+<img width="572" height="294" alt="Снимок экрана 2026-01-15 в 18 20 58" src="https://github.com/user-attachments/assets/b359cf54-2104-4c8f-8297-76068905e8ff" />
+
 
 # End
 this bot just school project,no more
